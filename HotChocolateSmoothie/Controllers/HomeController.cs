@@ -16,7 +16,7 @@ namespace HotChocolateSmoothie.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index","Board");
         }
 
         public IActionResult Privacy()
