@@ -5,21 +5,21 @@ namespace HotChocolateSmoothie.Controllers
 {
     public class AccountController : Controller
     {
-        public async Task<IActionResult> Index()
-        {
-            return View();
-        }
-
-
-        public async Task<IActionResult> LogIn()
-        {
-            return View();
-        }
-
-        public async Task<IActionResult> Logout()
-        {
-            return View();
-        }
+        //public async Task<IActionResult> Index()
+        //{
+        //    return View();
+        //}
+        //
+        //
+        //public async Task<IActionResult> LogIn()
+        //{
+        //    return View();
+        //}
+        //
+        //public async Task<IActionResult> Logout()
+        //{
+        //    return View();
+        //}
 
     }
 }

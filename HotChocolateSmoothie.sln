@@ -7,7 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotChocolateSmoothie", "Hot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAlgoTest", "src\ConsoleAlgoTest\ConsoleAlgoTest.csproj", "{5EC4C916-7030-486B-BA20-10892AFA460D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExcelToPdfTest", "src\ConsoleExcelToPdfTest\ConsoleExcelToPdfTest.csproj", "{83D869FE-6F74-4D10-9764-AFB8B21AF075}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleExcelToPdfTest", "src\ConsoleExcelToPdfTest\ConsoleExcelToPdfTest.csproj", "{83D869FE-6F74-4D10-9764-AFB8B21AF075}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleTest", "ConsoleTest", "{3698209F-3CA5-4C38-BA68-BCA32C7D5A52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebTest", "WebTest", "{DE620553-D1A0-4E17-BD64-696136F34C95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolate.ApplicationCore", "src\HotChocolate\HotChocolate.ApplicationCore.csproj", "{5443FA3E-B54E-4FB0-8D1F-E2BABA164294}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IceSmoothie.Infrastructrue", "src\IceSmoothie\IceSmoothie.Infrastructrue.csproj", "{22599483-9EB4-496D-9636-4E37C725F09F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +35,24 @@ Global
 		{83D869FE-6F74-4D10-9764-AFB8B21AF075}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83D869FE-6F74-4D10-9764-AFB8B21AF075}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83D869FE-6F74-4D10-9764-AFB8B21AF075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5443FA3E-B54E-4FB0-8D1F-E2BABA164294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5443FA3E-B54E-4FB0-8D1F-E2BABA164294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5443FA3E-B54E-4FB0-8D1F-E2BABA164294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5443FA3E-B54E-4FB0-8D1F-E2BABA164294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22599483-9EB4-496D-9636-4E37C725F09F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22599483-9EB4-496D-9636-4E37C725F09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22599483-9EB4-496D-9636-4E37C725F09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22599483-9EB4-496D-9636-4E37C725F09F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{126F58A2-A6C7-4A9B-9335-04CB6FCB2863} = {DE620553-D1A0-4E17-BD64-696136F34C95}
+		{5EC4C916-7030-486B-BA20-10892AFA460D} = {3698209F-3CA5-4C38-BA68-BCA32C7D5A52}
+		{83D869FE-6F74-4D10-9764-AFB8B21AF075} = {3698209F-3CA5-4C38-BA68-BCA32C7D5A52}
+		{5443FA3E-B54E-4FB0-8D1F-E2BABA164294} = {DE620553-D1A0-4E17-BD64-696136F34C95}
+		{22599483-9EB4-496D-9636-4E37C725F09F} = {DE620553-D1A0-4E17-BD64-696136F34C95}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2AAAAD6B-22E1-4BD9-9136-2733FCD56E5C}

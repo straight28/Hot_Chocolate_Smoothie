@@ -24,7 +24,9 @@ namespace HotChocolateSmoothie
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            //레이저 페이지 변경 후 새로고침하면 반영됨
+            //Nuget을 통해 Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 설치 후 AddRazorRuntimeCompilation() 추가
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
             ///쿠키를 이용한 Authentication
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -62,7 +64,6 @@ namespace HotChocolateSmoothie
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            
             
             app.UseHttpsRedirection();
             app.UseStaticFiles();
