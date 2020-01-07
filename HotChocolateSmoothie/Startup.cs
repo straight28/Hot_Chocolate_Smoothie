@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HotChocolate.ApplicationCore.Interfaces;
+using IceSmoothie.Infrastructrue.Utilities;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -48,7 +50,10 @@ namespace HotChocolateSmoothie
                 options.LogoutPath = "/Admin/Signout";
                 options.AccessDeniedPath = "/Admin/SignIn";
             });
-            
+
+            services.AddTransient<EmailSender>();
+            services.AddTransient<IEmailSmsText, EmailSmsText>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
