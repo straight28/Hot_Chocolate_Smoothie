@@ -13,9 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleTest", "ConsoleTest"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebTest", "WebTest", "{DE620553-D1A0-4E17-BD64-696136F34C95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolate.ApplicationCore", "src\HotChocolate\HotChocolate.ApplicationCore.csproj", "{5443FA3E-B54E-4FB0-8D1F-E2BABA164294}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotChocolate.ApplicationCore", "src\HotChocolate\HotChocolate.ApplicationCore.csproj", "{5443FA3E-B54E-4FB0-8D1F-E2BABA164294}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IceSmoothie.Infrastructrue", "src\IceSmoothie\IceSmoothie.Infrastructrue.csproj", "{22599483-9EB4-496D-9636-4E37C725F09F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IceSmoothie.Infrastructrue", "src\IceSmoothie\IceSmoothie.Infrastructrue.csproj", "{22599483-9EB4-496D-9636-4E37C725F09F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorTest", "BlazorTest", "{EFDC6889-0126-49E0-87EB-77BA71A634E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCalender", "BlazorCalender\BlazorCalender.csproj", "{38FA33A1-D3F4-40D6-83A0-4C0337290106}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,10 @@ Global
 		{22599483-9EB4-496D-9636-4E37C725F09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22599483-9EB4-496D-9636-4E37C725F09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22599483-9EB4-496D-9636-4E37C725F09F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38FA33A1-D3F4-40D6-83A0-4C0337290106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38FA33A1-D3F4-40D6-83A0-4C0337290106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38FA33A1-D3F4-40D6-83A0-4C0337290106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38FA33A1-D3F4-40D6-83A0-4C0337290106}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +61,7 @@ Global
 		{83D869FE-6F74-4D10-9764-AFB8B21AF075} = {3698209F-3CA5-4C38-BA68-BCA32C7D5A52}
 		{5443FA3E-B54E-4FB0-8D1F-E2BABA164294} = {DE620553-D1A0-4E17-BD64-696136F34C95}
 		{22599483-9EB4-496D-9636-4E37C725F09F} = {DE620553-D1A0-4E17-BD64-696136F34C95}
+		{38FA33A1-D3F4-40D6-83A0-4C0337290106} = {EFDC6889-0126-49E0-87EB-77BA71A634E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2AAAAD6B-22E1-4BD9-9136-2733FCD56E5C}
