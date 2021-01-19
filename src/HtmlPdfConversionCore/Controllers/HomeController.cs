@@ -1,0 +1,52 @@
+﻿using HtmlPdfConversionCore.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using SelectPdf;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace HtmlPdfConversionCore.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Aaaaa(string html)
+        {
+            html = html.Replace("StrTag", "<").Replace("EndTag", ">");
+
+            HtmlToPdf ohtmlToPdf = new HtmlToPdf();
+            PdfDocument pdfDocument = ohtmlToPdf.ConvertHtmlString(html);
+            byte[] pdf = pdfDocument.Save();
+            pdfDocument.Close();
+
+            return File(pdf, "application/pdf", "TestList.pdf");
+        }
+
+
+    }
+}
