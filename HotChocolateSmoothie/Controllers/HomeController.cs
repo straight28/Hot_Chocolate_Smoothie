@@ -14,9 +14,14 @@ namespace HotChocolateSmoothie.Controllers
             _logger = logger;
         }
 
+        //public IActionResult Index()
+        //{
+        //    return RedirectToAction("Index","Board");
+        //}
+
         public IActionResult Index()
         {
-            return RedirectToAction("Index","Board");
+            return View();
         }
 
         public IActionResult Privacy()

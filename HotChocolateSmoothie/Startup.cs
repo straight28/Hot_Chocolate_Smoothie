@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HotChocolate.ApplicationCore.Interfaces;
+using HotChocolateSmoothie.Hubs;
 using IceSmoothie.Infrastructrue.Utilities;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
@@ -28,31 +29,37 @@ namespace HotChocolateSmoothie
         {
             //레이저 페이지 변경 후 새로고침하면 반영됨
             //Nuget을 통해 Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation 설치 후 AddRazorRuntimeCompilation() 추가
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            //services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+            services.AddRazorPages();
+            services.AddSignalR();
+
 
             ///쿠키를 이용한 Authentication
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
-            {
-                ///사용자 쿠키 추가 
-                ///5분뒤면 expire
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
-                options.LoginPath = "/Account/LogIn";
-                options.LogoutPath = "/Account/Logout";
-                options.AccessDeniedPath = "/Account/LogIn";
-            })
-            .AddCookie(Constants.AdminAuthenticationScheme, options=> 
-            {
-                ///관리자 쿠키 추가
-                ///1시간 뒤면 expire
-                options.ExpireTimeSpan = TimeSpan.FromHours(1);
-                options.LoginPath = "/Admin/SignIn";
-                options.LogoutPath = "/Admin/Signout";
-                options.AccessDeniedPath = "/Admin/SignIn";
-            });
+            //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            //.AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+            //{
+            //    ///사용자 쿠키 추가 
+            //    ///5분뒤면 expire
+            //    options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+            //    options.LoginPath = "/Account/LogIn";
+            //    options.LogoutPath = "/Account/Logout";
+            //    options.AccessDeniedPath = "/Account/LogIn";
+            //})
+            //.AddCookie(Constants.AdminAuthenticationScheme, options=> 
+            //{
+            //    ///관리자 쿠키 추가
+            //    ///1시간 뒤면 expire
+            //    options.ExpireTimeSpan = TimeSpan.FromHours(1);
+            //    options.LoginPath = "/Admin/SignIn";
+            //    options.LogoutPath = "/Admin/Signout";
+            //    options.AccessDeniedPath = "/Admin/SignIn";
+            //});
 
-            services.AddTransient<EmailSender>();
-            services.AddTransient<IEmailSmsText, EmailSmsText>();
+            //services.AddTransient<EmailSender>();
+            //services.AddTransient<IEmailSmsText, EmailSmsText>();
+
+            
 
         }
 
@@ -69,16 +76,21 @@ namespace HotChocolateSmoothie
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            
+
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthorization();
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapHub<ChatHub>("/chathub");
+
             });
         }
     }
