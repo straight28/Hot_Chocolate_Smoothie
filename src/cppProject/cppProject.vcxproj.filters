@@ -36,5 +36,8 @@
     <ClCompile Include="ex07.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ex08.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
