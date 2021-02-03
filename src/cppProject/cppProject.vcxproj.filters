@@ -69,5 +69,11 @@
     <ClCompile Include="ex17.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ex18.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ex19.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
