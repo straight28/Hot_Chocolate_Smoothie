@@ -75,5 +75,8 @@
     <ClCompile Include="ex19.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ex20_pointer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
