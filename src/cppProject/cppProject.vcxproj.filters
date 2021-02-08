@@ -93,5 +93,8 @@
     <ClCompile Include="ex22_pointer&amp;array_1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ex22_pointer&amp;array_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

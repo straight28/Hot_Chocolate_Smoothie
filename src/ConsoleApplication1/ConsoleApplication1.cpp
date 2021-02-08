@@ -5,6 +5,9 @@
 
 int main()
 {
+
+    using namespace std;
+
     std::cout << "Hello Worldssds!\n";
 
     std::cout << "Test Test tt \n" << std::endl;
