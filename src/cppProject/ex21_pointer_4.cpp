@@ -39,13 +39,53 @@ int main()
 	int num = 10;
 	void* ptr_num = &num;
 
+	int a = 10;
+	int *ptr_a = &a;
+
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+
+
+	//printf("arr의 주소값은 %d\n", &arr);
+
+	for (int i = 0; i < 10; i++)
+	{
+		printf(" &arr [%d] 의 주소값 %d\n",i, &arr[i]);
+		printf(" arr + %d  의 주소값 %d\n", i, arr+i);
+	}
+
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+
+
+	for (int i = 0; i < 10; i++)
+	{
+		printf("%d ", *(arr + i));
+	}
+	printf("\n");
+
+
+	for (int *ptr = arr; ptr <arr + 10; ptr++)
+	{
+		printf("%d ", *ptr);
+		// 그냥 ptr은 포인터 값의 주소
+		//printf("ptr 값은 %d ", ptr);
+	}
+	printf("\n");
+
+
+
+	printf("ptr_a 의 주소값 %d\n", ptr_a);
+	printf("ptr_a + 1 의 주소값 %d\n", ptr_a+1);
+
 	printf("변수 num가 저장하고 있는 값은 %d 이다\n", num);
 	printf("void 포인터 ptr_num가 가리키는 주소에 저장된 값은 %d이다 \n", *(int*)ptr_num);
 
 	*(int*)ptr_num = 20; // void 포인터를 통한 메모리 접근
 	printf("void 포인터 ptr_num가 가리키는 주소에 저장된 값은 %d이다 \n", *(int*)ptr_num);
-
-
+	
 
 }
 
