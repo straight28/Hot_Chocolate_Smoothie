@@ -49,17 +49,18 @@ int main()
 
 	for (int i = 0; i < 10; i++)
 	{
-		printf(" &arr [%d] 의 주소값 %d\n",i, &arr[i]);
-		printf(" arr + %d  의 주소값 %d\n", i, arr+i);
+		printf(" &arr [%d] 의 주소값 %d\n", i, &arr[i]);
+		printf(" arr + %d  의 주소값 %d\n", i, (arr + i));
 	}
+
 
 	for (int i = 0; i < 10; i++)
 	{
 		printf("%d ", arr[i]);
 	}
-	printf("\n");
 
 
+	// 배열 + 1
 	for (int i = 0; i < 10; i++)
 	{
 		printf("%d ", *(arr + i));
@@ -67,14 +68,15 @@ int main()
 	printf("\n");
 
 
+	// 그냥 ptr은 포인터의 주소
+	// *ptr은 포인터가 가르키는 값 = 배열
 	for (int *ptr = arr; ptr <arr + 10; ptr++)
 	{
 		printf("%d ", *ptr);
-		// 그냥 ptr은 포인터 값의 주소
+		
 		//printf("ptr 값은 %d ", ptr);
 	}
 	printf("\n");
-
 
 
 	printf("ptr_a 의 주소값 %d\n", ptr_a);
