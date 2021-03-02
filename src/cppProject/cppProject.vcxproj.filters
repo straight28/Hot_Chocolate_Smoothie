@@ -108,5 +108,14 @@
     <ClCompile Include="ex21_pointer_6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ex21_pointer_7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ex23_array_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ex24_char_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
