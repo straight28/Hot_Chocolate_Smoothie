@@ -59,7 +59,7 @@ namespace Signal.Pages.Account
 
                     var autoProperties = new AuthenticationProperties();
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimIdentity), autoProperties);
-                    return RedirectToPage("/Index");
+                    return RedirectToPage("/Test/Index");
 
                 }
                 ModelState.AddModelError(string.Empty, "이름 혹은 비밀번호가 올바르지 않습니다. ");

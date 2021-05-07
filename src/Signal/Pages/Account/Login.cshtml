@@ -24,7 +24,7 @@
                 <div class="p-2 d-flex justify-content-between">
                     <div>
                         <a class="logo logo-admin" asp-page="/Account/Login">
-                            <img src="~/images/logo_gnb.png" height="50" alt="logo">
+                            @*<img src="~/images/logo_gnb.png" height="50" alt="logo">*@
                         </a>
                     </div>
                     <p class="text-end" style="margin-top:10px;font-size:22px;">Test</p>
@@ -32,11 +32,11 @@
                 <div class="mt-3 mb-4 text-start">
                     <p class="text-muted">Email과 비밀번호를 입력해 주십시오.</p>
                 </div>
-                <form method="post" asp-page="/Account/Login" class="text-start">
+                <form method="post" asp-page="/Login" class="text-start">
                     <div class="mb-3">
-                        <label asp-for="Name" class="form-label">Email</label>
+                        <label asp-for="Name" class="form-label">이름</label>
                         @*<input type="text" class="form-control" asp-for="Email" placeholder="Email 입력" autofocus />*@
-                        <input type="text" class="form-control" asp-for="Name" placeholder="Email 입력"/>
+                        <input type="text" class="form-control" asp-for="Name" placeholder="이름"/>
                         <span class="text-danger" asp-validation-for="Name"></span>
                     </div>
 
