@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<table id="myTable" class="table table-sm table-striped">
+    <thead class="thead-dark">
+        <tr class="d-flex">
+            <th scope="col" class="col-sm-2">ID</th>
+            <th scope="col" class="col-sm-6">Process Name</th>
+            <th scope="col" class="col-sm-4 text-right">Physical Memory</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model.Processes)
+    {
+        <tr class="d-flex">
+            <td class="col-ms-2">@item.Id</td>
+            <td class="col-ms-6">
+                @try
+                {
+                    @item.MainModule.ModuleName
+                }
+                catch (Exception)
+                {
+                    @item.ProcessName
+                }
+            </td>
+            <td class="col-ms-4">@item.WorkingSet64</td>
+        </tr>
+    }
+
+</table>
