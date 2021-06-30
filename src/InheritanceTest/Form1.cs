@@ -45,8 +45,12 @@ namespace InheritanceTest
 
             g.DrawRectangle(p, cOC._rtSquare1);
             g.DrawEllipse(p, cOC._rtCircle1);
+
+
+
+
         }
 
-
+        
     }
 }
