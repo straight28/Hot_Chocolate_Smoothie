@@ -75,6 +75,7 @@ namespace InheritanceTest
             this.btnCycle.TabIndex = 3;
             this.btnCycle.Text = "자전거";
             this.btnCycle.UseVisualStyleBackColor = true;
+            this.btnCycle.Click += new System.EventHandler(this.btnCycle_Click);
             // 
             // btnCar
             // 
@@ -84,6 +85,7 @@ namespace InheritanceTest
             this.btnCar.TabIndex = 4;
             this.btnCar.Text = "자동차";
             this.btnCar.UseVisualStyleBackColor = true;
+            this.btnCar.Click += new System.EventHandler(this.btnCar_Click);
             // 
             // btnLeft
             // 
@@ -93,6 +95,7 @@ namespace InheritanceTest
             this.btnLeft.TabIndex = 5;
             this.btnLeft.Text = "<-----";
             this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
             // btnRight
             // 
@@ -102,6 +105,7 @@ namespace InheritanceTest
             this.btnRight.TabIndex = 6;
             this.btnRight.Text = "----->";
             this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
             // Form1
             // 
