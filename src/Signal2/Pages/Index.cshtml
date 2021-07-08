@@ -1,0 +1,66 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center" style="margin-top: 10px;margin-left:30px;">
+    ID : <input type="text" id="id" />
+</div>
+
+<div class="text-center" style="margin-top:10px;margin-left:13px;">
+    내용 : <input type="text" id="message" />
+</div>
+
+<div class="text-center" style="margin-top:10px;margin-left:13px;">
+    <button id="submit">전송</button>
+</div>
+
+
+<div class="row">
+    <div class="col-13">
+        <hr />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <ul id="messageList"></ul>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/microsoft/signalr/dist/browser/signalr.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var connection = new signalR.HubConnectionBuilder().withUrl("/hubTests").build();
+
+        console.log(connection);
+         
+        connection.start().then(function () {
+            $("#submit").click(function () {
+                connection.invoke("Send", $("#id").val(), $("#message").val());
+            });
+        });
+
+        connection.on("Received", function (user, message) {
+            var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt").replace(/>/g, "&gt;");
+
+            var encodedMsg = user + " : " + msg;
+            var li = document.createElement("li");
+
+            console.log(encodedMsg);
+            console.log(li);
+
+            li.textContent =encodedMsg;
+            console.log(li);
+            document.getElementById("messageList").appendChild(li);
+        });
+    });
+
+    
+
+
+
+</script>
